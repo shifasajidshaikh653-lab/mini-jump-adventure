@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini Jump Adventure</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="game-card">
+    <header>
+      <h1>🌈 Mini Jump Adventure</h1>
+      <p class="subtitle">A little jump, a lot of magic!</p>
+    </header>
+
+    <section class="score-board">
+      <span>⭐ Score: <b id="score">0</b></span>
+      <span>🏆 Best: <b id="best">0</b></span>
+    </section>
+
+    <div id="game">
+      <div class="cloud cloud-one">☁️</div>
+      <div class="cloud cloud-two">☁️</div>
+      <div class="cloud cloud-three">☁️</div>
+
+      <div id="player">🐰</div>
+      <div id="obstacle">🌵</div>
+      <div id="star">⭐</div>
+      <div class="ground"></div>
+
+      <section id="overlay" class="overlay">
+        <div class="menu-panel">
+          <div class="hero-character" id="heroCharacter">🐰</div>
+          <h2 id="menuTitle">Ready for an adventure?</h2>
+          <p id="menuMessage">Jump over obstacles and collect stars!</p>
+
+          <label for="playerName">Your name</label>
+          <input id="playerName" maxlength="16"
+                 placeholder="Enter your name" value="Player">
+
+          <h3>Choose your character</h3>
+          <div class="character-options">
+            <button class="character selected" data-character="🐰"
+                    aria-label="Bunny">🐰</button>
+            <button class="character" data-character="🐱"
+                    aria-label="Cat">🐱</button>
+            <button class="character" data-character="🐻"
+                    aria-label="Bear">🐻</button>
+            <button class="character" data-character="🐸"
+                    aria-label="Frog">🐸</button>
+          </div>
+
+          <h3>Difficulty</h3>
+          <div class="difficulty-options">
+            <button class="difficulty" data-level="easy">Easy</button>
+            <button class="difficulty selected" data-level="normal">Normal</button>
+            <button class="difficulty" data-level="hard">Hard</button>
+          </div>
+
+          <button id="startBtn" class="primary">▶ Start Game</button>
+          <button id="leaderboardBtn" class="secondary">
+            🏆 High Scores
+          </button>
+          <button id="musicBtn" class="secondary">🔊 Sound: On</button>
+
+          <div id="leaderboard" hidden>
+            <h3>🏆 Top 5 Players</h3>
+            <ol id="leaderboardList"></ol>
+            <button id="closeLeaderboard" class="secondary">
+              Back to Menu
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <p class="controls">
+      ⌨️ Space / ↑ to jump &nbsp; • &nbsp; 📱 Tap to jump
+    </p>
+
+    <button id="menuBtn" class="secondary" hidden>
+      🏠 Main Menu
+    </button>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
